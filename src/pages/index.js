@@ -3,7 +3,7 @@ import Banner from '../Components/Banner';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import ProductFeed from '../Components/ProductFeed';
-
+import dynamic from 'next/dynamic';
 export default function Home({ products }) {
 	return (
 		<div className='bg-gray-100'>

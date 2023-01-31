@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import Product from './Product';
 import banner from '../Image/banner.jpg';
+import dynamic from 'next/dynamic';
 
 function ProductFeed({ products }) {
 	return (
@@ -58,4 +59,5 @@ function ProductFeed({ products }) {
 	);
 }
 
-export default ProductFeed;
+// export default ProductFeed;
+export default dynamic(() => Promise.resolve(ProductFeed), { ssr: false });
